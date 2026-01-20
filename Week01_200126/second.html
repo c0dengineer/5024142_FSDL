@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>College Registration Form</title>
+    <style>
+        
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        table {
+            width: 70%;              
+            margin: 30px auto;            
+            background-color: white;
+        }
+
+        td {
+            padding: 10px;
+            height: 40px;
+        }
+
+        .label-cell {
+            width: 30%;
+            background-color: #f9f9f9;
+            font-weight: bold;
+        }
+
+        
+        .photo-box {
+            width: 130px;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #ffffff;
+        }
+
+        .photo-box img {
+            width: 110px;
+            height: 130px;
+            border: 1px solid #ccc;
+        }
+
+        
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center;">College Registration Form</h1>
+    <hr style="width: 70%;">
+
+    <table>
+        <tr>
+            <td class="label-cell">Student Name</td>
+            <td></td>
+            <td rowspan="4" class="photo-box">
+                <img src="photo.jpg" alt="Photo"><br>
+                <small>Passport Photo</small>
+            </td> 
+        </tr>
+        <tr>
+            <td class="label-cell">Father's Name</td>
+            <td></td> 
+        </tr>
+        <tr>
+            <td class="label-cell">Mother's Name</td>
+            <td></td> 
+        </tr>
+        <tr>
+            <td class="label-cell">Date of Birth</td>
+            <td></td> 
+        </tr>
+
+        <tr>
+            <td class="label-cell">Email Address</td>
+            <td colspan="2"></td> 
+        </tr>
+        <tr>
+            <td class="label-cell">Contact No:</td>
+            <td colspan="2"></td> 
+        </tr>
+        <tr>
+            <td class="label-cell">Address</td>
+            <td colspan="2" style="height: 80px;"></td> 
+        </tr>
+
+        <tr>
+            <td colspan="3" style="text-align: center; height: 30px; background-color: #f2f2f2;">
+                <a href="https://example.com/terms">Terms & Conditions</a> | 
+                <a href="https://example.com/help">Help Desk</a>
+            </td>
+        </tr>
+    </table>
+
+    <p style="text-align: center;">
+        View our <a href="https://example.com/privacy">Privacy Policy</a>
+    </p>
+
+</body>
+</html>
