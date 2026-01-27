@@ -63,11 +63,6 @@ td {
     border: 2px solid #ffb300;
 }
 
-ul {
-    list-style-type: square;
-    color: #6a1b9a;
-}
-
 a {
     color: #d81b60;/
     text-decoration: none;
@@ -79,17 +74,12 @@ a:hover {
     text-decoration: underline;
 }
 
-a:visited {
-    color: #4527a0;
-}
-
 a:active {
     color: #c62828;
 }
 
 input:focus, textarea:focus {
     outline: none;
-    border-color: #8e24aa;
     box-shadow: 0 0 6px rgba(142, 36, 170, 0.6);
     
 }
@@ -115,4 +105,13 @@ input[type="email"] {
 }
 
 input[type="tel"] {
+}
+
+.submit-btn {
+    padding: 10px 25px;
+    background-color: #ff7043;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
 }
