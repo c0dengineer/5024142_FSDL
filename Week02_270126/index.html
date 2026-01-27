@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>College Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>College Registration Form</h1>
+<hr>
+
+<table>
+    <tr>
+        <td class="label-cell">Student Name</td>
+        <td><input type="text" class="input-box"></td>
+        <td rowspan="4" class="photo-box">
+            <img src="https://www.pngkit.com/png/detail/396-3965388_men-silhouette-transparent-background-passport-size-photo-blank.png" alt="Photo" id="preview"><br>
+            <small>Passport Photo</small><br>
+            <input type="file" accept="image/*" onchange="loadPhoto(event)">
+        </td>
+    </tr>
+    <tr>
+        <td class="label-cell">Father's Name</td>
+        <td><input type="text" class="input-box"></td>
+    </tr>
+    <tr>
+        <td class="label-cell">Mother's Name</td>
+        <td><input type="text" class="input-box"></td>
+    </tr>
+    <tr>
+        <td class="label-cell">Date of Birth</td>
+        <td><input type="text" class="input-box" placeholder="dd-mm-yyyy"></td>
+    </tr>
+
+    <tr>
+        <td class="label-cell">Email Address</td>
+        <td colspan="2"><input type="email" class="input-box"></td>
+    </tr>
+    <tr>
+        <td class="label-cell">Contact No:</td>
+        <td colspan="2"><input type="tel" class="input-box"></td>
+    </tr>
+    <tr>
+        <td class="label-cell">Address</td>
+        <td colspan="2">
+            <textarea class="input-box"></textarea>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="3" class="footer-links">
+            <a href="https://example.com/terms">Terms & Conditions</a> | 
+            <a href="https://example.com/help">Help Desk</a>
+        </td>
+    </tr>
+</table>
+
+<p class="privacy-text">
+    View our <a href="https://example.com/privacy">Privacy Policy</a>
+</p>
+
+<script>
+function loadPhoto(event) {
+    document.getElementById('preview').src = URL.createObjectURL(event.target.files[0]);
+}
+</script>
+
+</body>
+</html>
