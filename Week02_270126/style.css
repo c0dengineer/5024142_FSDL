@@ -1,0 +1,154 @@
+/* =========================
+   1. CSS SYNTAX
+   selector { property: value; }
+   ========================= */
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif; /* Fonts */
+    background: linear-gradient(to right, #e3f2fd, #ffffff); /* Background + CSS3 */
+    margin: 0;
+    padding: 20px;
+    color: #333; /* Color */
+}
+
+/* =========================
+   2. ELEMENT SELECTORS
+   ========================= */
+
+h1 {
+    text-align: center;
+    color: #0d47a1;
+}
+
+hr {
+    width: 70%;
+    border: 1px solid #90caf9;
+}
+
+/* =========================
+   3. CLASS SELECTORS
+   ========================= */
+
+.label-cell {
+    font-weight: bold;
+    background-color: #f1f8ff;
+    width: 30%;
+}
+
+.input-box {
+    width: 95%;
+    padding: 8px;
+    border: 1px solid #90caf9;
+    border-radius: 6px; /* CSS3 */
+    font-size: 14px;
+}
+
+.photo-box {
+    width: 160px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px; /* CSS3 */
+    box-shadow: 0 0 8px rgba(0,0,0,0.1); /* CSS3 */
+    padding: 10px;
+}
+
+.footer-links {
+    text-align: center;
+    background-color: #e3f2fd;
+}
+
+.privacy-text {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* =========================
+   4. TABLE STYLING
+   ========================= */
+
+table {
+    width: 70%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+td {
+    padding: 10px;
+    height: 40px;
+    border: 1px solid #90caf9;
+}
+
+/* =========================
+   5. LIST STYLING (Example)
+   ========================= */
+
+ul {
+    list-style-type: square;
+    color: #1565c0;
+}
+
+/* =========================
+   6. LINK STYLING + PSEUDO-CLASSES
+   ========================= */
+
+a {
+    color: #0d47a1;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {                 /* Pseudo-class */
+    color: #1565c0;
+    text-decoration: underline;
+}
+
+a:visited {               /* Pseudo-class */
+    color: #4a148c;
+}
+
+a:active {                /* Pseudo-class */
+    color: red;
+}
+
+/* =========================
+   7. FORM PSEUDO-CLASSES
+   ========================= */
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #0d47a1;
+    box-shadow: 0 0 5px rgba(13,71,161,0.4); /* CSS3 */
+}
+
+input::placeholder {      /* Pseudo-element */
+    color: #888;
+    font-style: italic;
+}
+
+/* =========================
+   8. CSS3 FEATURES
+   ========================= */
+
+.photo-box img {
+    width: 120px;
+    height: 150px;
+    border-radius: 8px; /* CSS3 */
+    transition: transform 0.3s ease; /* CSS3 animation */
+}
+
+.photo-box img:hover {
+    transform: scale(1.05); /* CSS3 transform */
+}
+
+/* =========================
+   9. ATTRIBUTE SELECTORS
+   ========================= */
+
+input[type="email"] {
+    background-color: #f0f8ff;
+}
+
+input[type="tel"] {
+    background-color: #f0f8ff;
+}
