@@ -1,0 +1,174 @@
+header {
+    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #fff0f5, #f0fff0);
+}
+
+header {
+    background-color: #ff6f61;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #ffcc00;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #4b0082;
+}
+
+nav a:hover {
+    color: #d35400;
+}
+
+.hero {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #4b0082;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #ffa500;
+}
+
+.section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.packages {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    color: white;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.card * {
+    position: relative;
+    z-index: 1;
+}
+
+.goa {
+    background-image: url("https://assets.serenity.co.uk/58000-58999/58779/720x480.jpg");
+}
+
+.manali {
+    background-image: url("https://www.gokitetours.com/wp-content/uploads/2024/10/3.-Manali-.webp");
+}
+
+.kerala {
+    background-image: url("https://images.unsplash.com/photo-1593693411515-c20261bcad6e");
+}
+
+.rajasthan {
+    background-image: url("https://static.hectindia.com/0000/6/2024/03/25/hawa-mahal-jaipur-rajasthan-hecrt-india-1024.webp");
+}
+
+.card {
+    background-color: white;
+    width: 220px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+    color: #ff6f61;
+}
+
+.booking-form {
+    max-width: 400px;
+    margin: auto;
+    text-align: left;
+}
+
+.booking-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.booking-form input,
+.booking-form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.booking-form button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.booking-form button:hover {
+    background-color: #e74c3c;
+}
+
+footer {
+    background-color: #4b0082;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}

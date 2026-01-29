@@ -13,7 +13,8 @@
 <table>
     <tr>
         <td class="label-cell">Student Name</td>
-        <td><input type="text" class="input-box"></td>
+        
+        <td><input type="text" class="input-box" placeholder="Enter your name"></td>
         <td rowspan="4" class="photo-box">
             <img src="https://www.pngkit.com/png/detail/396-3965388_men-silhouette-transparent-background-passport-size-photo-blank.png" alt="Photo" id="preview"><br>
             <small>Passport Photo</small><br>
@@ -22,29 +23,35 @@
     </tr>
     <tr>
         <td class="label-cell">Father's Name</td>
-        <td><input type="text" class="input-box"></td>
+        <td><input type="text" class="input-box"" placeholder="Enter your father's name"></td>
     </tr>
     <tr>
         <td class="label-cell">Mother's Name</td>
-        <td><input type="text" class="input-box"></td>
+        <td><input type="text" class="input-box" placeholder="Enter your mother's name"></td>
     </tr>
     <tr>
         <td class="label-cell">Date of Birth</td>
-        <td><input type="text" class="input-box" placeholder="dd-mm-yyyy"></td>
+        <td><input type="date" class="input-box" placeholder="dd-mm-yyyy"></td>
     </tr>
 
     <tr>
         <td class="label-cell">Email Address</td>
-        <td colspan="2"><input type="email" class="input-box"></td>
+        <td colspan="2"><input type="email" class="input-box" placeholder="Enter your email"></td>
     </tr>
     <tr>
         <td class="label-cell">Contact No:</td>
-        <td colspan="2"><input type="tel" class="input-box"></td>
+        <td colspan="2"><input type="tel" class="input-box" placeholder="Enter your phone number"></td>
     </tr>
     <tr>
         <td class="label-cell">Address</td>
         <td colspan="2">
             <textarea class="input-box"></textarea>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="3" style="text-align: center;">
+            <input type="submit" value="Submit" class="submit-btn">
         </td>
     </tr>
 
@@ -61,9 +68,7 @@
     View our <a href="https://example.com/privacy">Privacy Policy</a>
 </p>
 
-<div style="text-align: center ; margin-top: 20px;">
-    <input type="submit" value="Submit" class="submit-btn">
-</div>
+
 
 <script>
 function loadPhoto(event) {

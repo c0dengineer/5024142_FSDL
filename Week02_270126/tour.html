@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dream Tours & Travels</title>
+    <link rel="stylesheet" href="tourstyle.css">
+</head>
+<body>
+
+<header>
+    <h1>Dream Tours & Travels</h1>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#packages">Packages</a>
+    <a href="#booking">Booking</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="home" class="hero">
+    <h2>Explore the World With Us</h2>
+    <p>Best travel deals for your dream destinations</p>
+    <a href="#booking" class="btn">Book Now</a>
+</section>
+
+<section id="about" class="section">
+    <h2>About Us</h2>
+    <p>Dream Tours & Travels is a trusted travel agency providing exciting tour packages, affordable prices, and excellent customer service. We make your travel easy, safe, and memorable.</p>
+</section>
+
+<section id="packages" class="section">
+    <h2>Popular Tour Packages</h2>
+    <div class="packages">
+    <div class="card goa">
+        <h3>Goa Beach Tour</h3>
+        <p>3 Nights / 4 Days</p>
+        <p>Price: ₹15,000</p>
+    </div>
+    <div class="card manali">
+        <h3>Manali Hill Station</h3>
+        <p>4 Nights / 5 Days</p>
+        <p>Price: ₹18,000</p>
+    </div>
+    <div class="card kerala">
+        <h3>Kerala Backwaters</h3>
+        <p>5 Nights / 6 Days</p>
+        <p>Price: ₹22,000</p>
+    </div>
+    <div class="card rajasthan">
+        <h3>Rajasthan Heritage Tour</h3>
+        <p>6 Nights / 7 Days</p>
+        <p>Price: ₹25,000</p>
+    </div>
+    </div>
+</section>
+
+<section id="booking" class="section">
+    <h2>Book Your Tour</h2>
+    <form class="booking-form">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name" required>
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email" required>
+
+        <label>Contact Number</label>
+        <input type="tel" placeholder="Enter your phone number" required>
+
+        <label>Select Package</label>
+        <select required>
+            <option value="">-- Choose a Package --</option>
+            <option>Goa Beach Tour</option>
+            <option>Manali Hill Station</option>
+            <option>Kerala Backwaters</option>
+            <option>Rajasthan Heritage Tour</option>
+        </select>
+
+        <label>Travel Date</label>
+        <input type="date" required>
+
+        <label>Number of Travelers</label>
+        <input type="number" min="1" max="10" required>
+
+        <button type="submit">Submit Booking</button>
+    </form>
+</section>
+
+<section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Email: dreamtours@gmail.com</p>
+    <p>Phone: +91 98209 56257</p>
+    <p>Address: New Panvel, India</p>
+</section>
+
+<footer>
+    <p>© 2026 Dream Tours & Travels | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
