@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>College Registration Form</title>
+</head>
+<body>
+
+    <h1 style="text-align: center;">College Registration Form</h1>
+    <hr style="width: 70%;">
+
+    <table border="1" width="70%" align="center" cellpadding="5" cellspacing="0">
+        <tr>
+            <td>Student Name</td>
+            <td><input type="text" size="40"></td>
+            <td rowspan="4" align="center">
+                <img src="https://www.pngkit.com/png/detail/396-3965388_men-silhouette-transparent-background-passport-size-photo-blank.png" 
+                     alt="Photo" width="120" height="150" id="preview"><br>
+                <small>Passport Photo</small><br>
+                <input type="file" accept="image/*" onchange="loadPhoto(event)">
+            </td>
+        </tr>
+        <tr>
+            <td>Father's Name</td>
+            <td><input type="text" size="40"></td>
+        </tr>
+        <tr>
+            <td>Mother's Name</td>
+            <td><input type="text" size="40"></td>
+        </tr>
+        <tr>
+            <td>Date of Birth</td>
+            <td><input type="text" placeholder="dd-mm-yyyy" size="40"></td>
+        </tr>
+        <tr>
+            <td>Email Address</td>
+            <td colspan="2"><input type="email" size="85"></td>
+        </tr>
+        <tr>
+            <td>Contact No:</td>
+            <td colspan="2"><input type="tel" size="85"></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td colspan="2"><textarea rows="4" cols="65"></textarea></td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center">
+                <a href="https://example.com/terms">Terms & Conditions</a> | 
+                <a href="https://example.com/help">Help Desk</a>
+            </td>
+        </tr>
+    </table>
+
+    <p style="text-align: center;">
+        View our <a href="https://example.com/privacy">Privacy Policy</a>
+    </p>
+
+    <script>
+        function loadPhoto(event) {
+            const image = document.getElementById('preview');
+            image.src = URL.createObjectURL(event.target.files[0]);
+        }
+    </script>
+
+</body>
+</html>
