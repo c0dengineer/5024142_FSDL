@@ -1,0 +1,50 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    margin: 20px;
+    line-height: 1.6;
+}
+
+/* Main Heading */
+h1 {
+    color: #003366;
+    text-align: center;
+}
+
+/* Section Headings */
+h2 {
+    color: #0055a5;
+    border-bottom: 2px solid #0055a5;
+    padding-bottom: 5px;
+    margin-top: 25px;
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 16px;
+}
+
+/* Lists */
+ul, ol {
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+/* Iframe Map */
+iframe {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Contact Section */
+h2:last-of-type + p {
+    background-color: #e8f0fe;
+    padding: 10px;
+    border-radius: 6px;
+}

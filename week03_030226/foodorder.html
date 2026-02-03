@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FoodExpress - Online Food Delivery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="foodstyle.css">
+</head>
+<body>
+
+    <header class="text-center p-4 shadow-sm">
+        <h1>🍕 FoodExpress</h1>
+        <p>Fast. Fresh. Delivered.</p>
+        <nav>
+            <a href="#" class="mx-2">Home</a>
+            <a href="#" class="mx-2">Restaurants</a>
+            <a href="#" class="mx-2">Offers</a>
+            <a href="#" class="mx-2">Orders</a>
+            <a href="#" class="mx-2">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="container my-5 p-4">
+        <h2 class="text-center mb-4">Order Food Online from Your Favorite Restaurants</h2>
+        <form class="text-center">
+            <div class="mb-3">
+                <label class="form-label">Enter your location:</label>
+                <input type="text" class="form-control mx-auto" style="max-width: 400px;" placeholder="e.g. Mumbai, Delhi">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Search for dishes or restaurants:</label>
+                <input type="text" class="form-control mx-auto" style="max-width: 400px;" placeholder="Pizza, Burger, Biryani...">
+            </div>
+            <button type="submit" class="btn btn-pink px-4">Search</button>
+        </form>
+    </section>
+
+    <section class="container my-5 p-4">
+        <h2 class="text-center mb-4">Popular Categories</h2>
+        <div class="row g-3 text-center">
+            <div class="col-6 col-md-4 col-lg-2">🍔 Burgers</div>
+            <div class="col-6 col-md-4 col-lg-2">🍕 Pizza</div>
+            <div class="col-6 col-md-4 col-lg-2">🍜 Chinese</div>
+            <div class="col-6 col-md-4 col-lg-2">🍛 Indian</div>
+            <div class="col-6 col-md-4 col-lg-2">🥗 Healthy</div>
+            <div class="col-6 col-md-4 col-lg-2">🍰 Desserts</div>
+        </div>
+    </section>
+
+    
+    <section class="container my-5 p-4">
+        <h2 class="text-center mb-4">Featured Restaurants</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card restaurant-card text-center text-white" style="background-image: url('https://i.pinimg.com/736x/21/42/d3/2142d34a0635dd1bf7ebfb8384c48dff.jpg');">
+        <div class="card-overlay">
+                    <h3>Spice Hub</h3>
+                    <p>⭐ 4.5 | Indian, North Indian</p>
+                    <p>Delivery Time: 30 mins</p>
+                    <p>Minimum Order: ₹199</p>
+                    <button class="btn btn-pink">View Restaurant</button>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card restaurant-card text-center text-white" style="background-image: url('https://i.pinimg.com/736x/dc/5d/ba/dc5dba445aea4ddfa37e05e12b2bb3f2.jpg');">
+        <div class="card-overlay">
+                    <h3>Pizza Palace</h3>
+                    <p>⭐ 4.3 | Italian, Fast Food</p>
+                    <p>Delivery Time: 25 mins</p>
+                    <p>Minimum Order: ₹149</p>
+                    <button class="btn btn-pink">View Restaurant</button>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card restaurant-card text-center text-white" style="background-image: url('https://i.pinimg.com/736x/09/ad/3a/09ad3a91d56d1ceebacaad04bfa901f5.jpg');">
+        <div class="card-overlay">
+                    <h3>Burger Bros</h3>
+                    <p>⭐ 4.4 | Burgers, Snacks</p>
+                    <p>Delivery Time: 20 mins</p>
+                    <p>Minimum Order: ₹99</p>
+                    <button class="btn btn-pink">View Restaurant</button>
+                </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+<section class="container my-5 p-4">
+    <h2 class="text-center mb-4">Find Us on Map</h2>
+    <div class="map-container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11605291668!2d72.7410998582199!3d19.082197839160836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63e6a0f3a07%3A0x97e77b25e5c53e9!2sMumbai%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sin!4v1694376557200!5m2!1sen!2sin"
+            width="1270"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</section>
+
+    <footer class="text-center p-4 mt-5">
+        <p>&copy; 2026 FoodExpress. All rights reserved.</p>
+        <p>About Us | Careers | Partner With Us | Terms & Conditions | Privacy Policy</p>
+        <p>Follow us: Facebook | Instagram | Twitter</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff9f0; /* very soft cream */
+    color: #333;
+}
+
+/* Header */
+header {
+    background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+header h1,
+header p,
+header nav a {
+    color: #ffffff; /* darker warm brown */
+}
+
+header nav a {
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 8px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Sections */
+section {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(255, 165, 100, 0.2); /* soft shadow */
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+/* Custom Coral Button */
+.btn-pink {
+    background-color: #ffa366; /* warm coral button */
+    color: white;
+    border-radius: 18px;
+    padding: 8px 20px;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-pink:hover {
+    background-color: #ff8c33; /* deeper orange on hover */
+}
+
+/* Categories boxes */
+section .col-6,
+section .col-md-4,
+section .col-lg-2 {
+    background: #fff2e0; /* soft cream-orange */
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 500;
+    color: #ff7b33; /* coral-orange text */
+    text-align: center;
+}
+
+/* Cards */
+.card {
+    border-radius: 12px;
+    border: none;
+    background: #fff5eb; /* warm cream */
+    box-shadow: 0 3px 6px rgba(255, 165, 100, 0.15);
+    padding: 15px;
+}
+
+.card h3 {
+    color: #ff8033; /* coral header */
+}
+
+/* List group */
+.list-group-item {
+    background: #fff7f0; /* soft cream */
+    border: none;
+    color: #ff8033;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #ffddc1; /* soft coral footer */
+    color: #5a3d2b; /* darker warm text */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Restaurant Cards with Background Image */
+.restaurant-card {
+    position: relative;
+    border-radius: 12px;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(255, 165, 100, 0.15);
+}
+
+/* Overlay to make text readable */
+.restaurant-card .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 165, 100, 0.4); /* semi-transparent coral overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.restaurant-card .card-overlay h3,
+.restaurant-card .card-overlay p {
+    margin: 3px 0;
+    color: white; /* ensure readability */
+}
+
+.restaurant-card .btn-pink {
+    background-color: #ff8c33; /* brighter orange button */
+    color: white;
+    margin-top: 10px;
+}
+
+.restaurant-card .btn-pink:hover {
+    background-color: #ff6b00;
+}
