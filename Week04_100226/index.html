@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark px-4">
+  <a class="navbar-brand fw-bold" href="#">G</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+    <ul class="navbar-nav gap-4">
+      <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+      <li class="nav-item"><a class="nav-link" href="#games">Games</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Learn</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+    </ul>
+  </div>
+
+  <!-- LOGIN / USER SECTION -->
+  <div id="authSection" class="d-flex align-items-center gap-3">
+    <button class="btn btn-outline-light btn-sm rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#loginModal" id="loginBtn">
+      Sign In
+    </button>
+  </div>
+</nav>
+
+<!-- LOGIN MODAL -->
+<div class="modal fade" id="loginModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content login-modal">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">Sign in to continue</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="loginForm">
+          <div class="mb-3">
+            <label class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" required>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 mt-3">Sign In</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="container text-center">
+    <h1 id="mainHeading">Game making made easy</h1>
+    <p class="mt-3" id="heroText">
+      Make games with GDevelop, a no-code, free and open-source 2D game engine.
+    </p>
+    <div class="mt-4 d-flex justify-content-center gap-3">
+      <a href="#" class="btn btn-primary-custom rounded-pill px-4 py-2" id="tryBtn">Try online</a>
+      <a href="#" class="btn btn-secondary-custom rounded-pill px-4 py-2" id="downloadHeroBtn">Download</a>
+    </div>
+  </div>
+</section>
+
+<!-- CLOUD DIVIDER -->
+<div class="clouds"></div>
+
+<!-- FEATURES SECTION -->
+<section class="features" id="features">
+  <div class="container">
+    <h2 class="fw-bold mb-4">Game creation, <span>intuitive for all</span></h2>
+    <p class="mb-5" id="featureMessage">
+      What makes GDevelop unique and so easy to use are events. Events are a powerful way to express
+      the logic of your game, without having to learn a programming language.
+    </p>
+
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-3 feature-card" data-feature="Events System">
+        <img src="https://i.pinimg.com/1200x/3b/d5/ed/3bd5ed06068099760c70d9c8133a6438.jpg" alt="Feature 1">
+        <h5>Events System</h5>
+        <p>Create logic without coding.</p>
+      </div>
+
+      <div class="col-md-3 feature-card" data-feature="Assets Ready">
+        <img src="https://i.pinimg.com/1200x/e2/1b/37/e21b37c71ac9b60c2b43150aae30d432.jpg" alt="Feature 2">
+        <h5>Assets Ready</h5>
+        <p>Use ready-made sprites.</p>
+      </div>
+
+      <div class="col-md-3 feature-card" data-feature="Fast Testing">
+        <img src="https://i.pinimg.com/736x/ad/aa/4c/adaa4ceaa782d3ad20e5c9f82ac9b7a7.jpg" alt="Feature 3">
+        <h5>Fast Testing</h5>
+        <p>Instant preview & debug.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLAYABLE GAMES SECTION -->
+<section class="games" id="games">
+  <div class="container">
+
+    <!-- FEATURED GAME -->
+    <div class="featured-game mb-5">
+      <div class="featured-overlay">
+        <h3>Dota 2</h3>
+        <p>Free-to-play competitive MOBA with millions of players worldwide.</p>
+        <button class="btn btn-success play-btn" data-game="Dota 2">Play Now</button>
+      </div>
+    </div>
+
+    <!-- DISCOUNTS & EVENTS -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h4 class="section-title">Discounts & Events</h4>
+      <button class="btn btn-outline-light btn-sm">Browse More</button>
+    </div>
+
+    <div class="game-carousel">
+      <div class="game-card">
+        <img src="https://steamcdn-a.akamaihd.net/steam/apps/939510/ss_2577136fdb732446184c6ad921620ae34f8081a3.1920x1080.jpg?t=1556201487">
+        <div class="game-info">
+          <h6>Zombie Escape</h6>
+          <span class="price">₹399</span>
+          <button class="btn btn-sm btn-primary play-btn" data-game="Zombie Escape">Play</button>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <img src="https://th.bing.com/th/id/OIP.xwFbzgN1EmOeTs-oSMFMRgHaDt?w=328&h=175&c=7&r=0&o=7&pid=1.7&rm=3">
+        <div class="game-info">
+          <h6>Pixel Racer</h6>
+          <span class="price">₹299</span>
+          <button class="btn btn-sm btn-primary play-btn" data-game="Pixel Racer">Play</button>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <img src="https://cdn.akamai.steamstatic.com/steam/apps/1442350/ss_f629b4442129b68ecbc4167a4ccf59e5fcaa2bb4.1920x1080.jpg?t=1609956481">
+        <div class="game-info">
+          <h6>Space Runner</h6>
+          <span class="price">Free</span>
+          <button class="btn btn-sm btn-success play-btn" data-game="Space Runner">Play</button>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <img src="https://www.metacritic.com/a/img/catalog/provider/6/12/6-1-947431-52.jpg">
+        <div class="game-info">
+          <h6>Alien Attack</h6>
+          <span class="price">₹499</span>
+          <button class="btn btn-sm btn-primary play-btn" data-game="Alien Attack">Play</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PUBLISH SECTION -->
+<section class="publish">
+  <div class="container">
+    <h2 class="fw-bold mb-3">Publish your game <span>in two clicks</span></h2>
+    <p class="mb-4">
+      Games created with GDevelop run anywhere and can be exported to all major platforms.
+    </p>
+
+    <div class="store-icons mt-4">
+      <img src="https://www.svgrepo.com/show/513083/windows-174.svg" data-platform="Windows">
+      <img src="https://www.svgrepo.com/show/511330/apple-173.svg" data-platform="Apple">
+      <img src="https://www.svgrepo.com/show/508764/android.svg" data-platform="Android">
+      <img src="https://www.svgrepo.com/show/503338/facebook.svg" data-platform="Facebook">
+      <img src="https://www.svgrepo.com/show/473800/steam.svg" data-platform="Steam">
+    </div>
+  </div>
+</section>
+
+<!-- FLOATING BUTTONS -->
+<div class="floating-btns">
+  <button id="visitBtn">↗ Visit site</button>
+</div>
+
+<div class="floating-btns right">
+  <button id="fullscreenBtn">⛶</button>
+  <button id="refreshBtn">⟳</button>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="script.js"></script>
+</body>
+</html>
