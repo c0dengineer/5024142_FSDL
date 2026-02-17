@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login & Registration</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .container {
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            background: rgb(27, 163, 156);
+            border-radius: 10px;
+            /* box-shadow: 0 0 10px rgb(204, 77, 77); */
+        }
+
+        input {
+            width: 90%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Register</h2>
+    <input type="text" id="regUsername" placeholder="Username">
+    <input type="password" id="regPassword" placeholder="Password">
+    <input type="date" id="regDOB">
+    <button onclick="register()">Register</button>
+
+    <h2>Login</h2>
+    <input type="text" id="loginUsername" placeholder="Username">
+    <input type="password" id="loginPassword" placeholder="Password">
+    <button onclick="login()">Login</button>
+
+    <p id="message"></p>
+</div>
+
+<script>
+    // Array
+    let users = [];
+
+    function register() {
+        try {
+            let username = document.getElementById("regUsername").value.trim();
+            let password = document.getElementById("regPassword").value.trim();
+            let dob = document.getElementById("regDOB").value;
+            let message = document.getElementById("message");
+
+            message.innerHTML = "";
+
+            // Validations
+            if (username === "") {
+                throw "Username cannot be empty!";
+            }
+
+            if (password.length < 6) {
+                throw "Password must be at least 6 characters!";
+            }
+
+            if (dob === "") {
+                throw "Please select Date of Birth!";
+            }
+
+            // String validation
+            if (!/[A-Z]/.test(password)) {
+                throw "Password must contain at least one uppercase letter!";
+            }
+
+            //Exception handling
+            let registrationDate = new Date();
+            let birthDate = new Date(dob);
+
+            users.push({
+                username: username,
+                password: password,
+                dob: birthDate,
+                registeredOn: registrationDate
+            });
+
+            message.innerHTML = "Registration Successful!";
+            message.className = "success";
+
+        } catch (error) {
+            message.innerHTML = error;
+            message.className = "error";
+        }
+    }
+
+    function login() {
+        try {
+            let username = document.getElementById("loginUsername").value.trim();
+            let password = document.getElementById("loginPassword").value.trim();
+            let message = document.getElementById("message");
+
+            message.innerHTML = "";
+
+            if (username === "" || password === "") {
+                throw "All fields are required!";
+            }
+
+            let found = users.find(user =>
+                user.username === username &&
+                user.password === password
+            );
+
+            if (!found) {
+                throw "Invalid Username or Password!";
+            }
+
+            message.innerHTML = 
+                "Login Successful! Registered On: " +
+                found.registeredOn.toDateString();
+
+            message.className = "success";
+
+        } catch (error) {
+            message.innerHTML = error;
+            message.className = "error";
+        }
+    }
+</script>
+
+</body>
+</html>

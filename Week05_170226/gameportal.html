@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Portal</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #1f1c2c, #c65ddb);
+            background : url("https://i1.sndcdn.com/artworks-xPp6rpbPbNAtk7Ys-t4OxGw-t500x500.png") no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 25px;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgb(207, 5, 190);
+        }
+
+        h2 { text-align: center; }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 6px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: purple;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .link {
+            color: purple;
+            cursor: pointer;
+            font-size: 14px;
+            text-align: center;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .error { color: red; font-size: 14px; }
+        .success { color: green; font-size: 14px; }
+
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>🎮 Game Portal</h2>
+
+    <!-- LOGIN SECTION -->
+    <div id="loginSection">
+        <h3>Login</h3>
+        <input type="text" id="loginUser" placeholder="Username">
+        <input type="password" id="loginPass" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p id="loginMsg"></p>
+        <span class="link" onclick="showRegister()">Don't have an account? Register</span>
+    </div>
+
+    <!-- REGISTER SECTION -->
+    <div id="registerSection" class="hidden">
+        <h3>Register</h3>
+        <input type="text" id="regName" placeholder="Full Name">
+        <input type="text" id="regUser" placeholder="Username">
+        <input type="email" id="regEmail" placeholder="Email">
+        <input type="password" id="regPass" placeholder="Password">
+        <input type="date" id="regDOB">
+        <button onclick="register()">Register</button>
+        <p id="regMsg"></p>
+        <span class="link" onclick="showLogin()">Already have an account? Login</span>
+    </div>
+</div>
+
+<script>
+
+    // ARRAY to store users
+    let users = [];
+
+    function showRegister() {
+        document.getElementById("loginSection").classList.add("hidden");
+        document.getElementById("registerSection").classList.remove("hidden");
+    }
+
+    function showLogin() {
+        document.getElementById("registerSection").classList.add("hidden");
+        document.getElementById("loginSection").classList.remove("hidden");
+    }
+
+    function register() {
+        try {
+            let name = document.getElementById("regName").value.trim();
+            let username = document.getElementById("regUser").value.trim().toLowerCase();
+            let email = document.getElementById("regEmail").value.trim();
+            let password = document.getElementById("regPass").value.trim();
+            let dob = document.getElementById("regDOB").value;
+
+            // VALIDATIONS
+            if (!name || !username || !email || !password || !dob) {
+                throw "All fields are required!";
+            }
+
+            if (password.length < 6) {
+                throw "Password must be at least 6 characters!";
+            }
+
+            // Email validation (STRING + REGEX)
+            let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!email.match(emailPattern)) {
+                throw "Invalid email format!";
+            }
+
+            // AGE validation (DATE)
+            let birthYear = new Date(dob).getFullYear();
+            let currentYear = new Date().getFullYear();
+            let age = currentYear - birthYear;
+
+            if (age < 13) {
+                throw "You must be 13+ to register!";
+            }
+
+            // Check duplicate username (ARRAY)
+            let exists = users.find(user => user.username === username);
+            if (exists) {
+                throw "Username already exists!";
+            }
+
+            // Add user to ARRAY
+            users.push({ name, username, email, password });
+
+            document.getElementById("regMsg").innerHTML =
+                "<span class='success'>Registration Successful! Redirecting to Login...</span>";
+
+            setTimeout(() => {
+                showLogin();
+                document.getElementById("regMsg").innerHTML = "";
+            }, 2000);
+
+        } catch (error) {
+            document.getElementById("regMsg").innerHTML =
+                "<span class='error'>" + error + "</span>";
+        }
+    }
+
+    function login() {
+        try {
+            let username = document.getElementById("loginUser").value.trim().toLowerCase();
+            let password = document.getElementById("loginPass").value.trim();
+
+            if (!username || !password) {
+                throw "Enter login details!";
+            }
+
+            let found = users.find(user =>
+                user.username === username && user.password === password
+            );
+
+            if (!found) {
+                throw "Invalid Credentials!";
+            }
+
+            document.getElementById("loginMsg").innerHTML =
+                "<span class='success'>Welcome " + found.name + " 🎉</span>";
+
+        } catch (error) {
+            document.getElementById("loginMsg").innerHTML =
+                "<span class='error'>" + error + "</span>";
+        }
+    }
+
+</script>
+
+</body>
+</html>
