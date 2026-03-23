@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autism Tests</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter', sans-serif;
+    background:#f8f9fb;
+    color:#222;
+    line-height:1.6;
+}
+
+/* HEADER */
+header{
+    background:white;
+    padding:25px 10%;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+header h1{
+    font-weight:600;
+    font-size:28px;
+}
+
+/* HERO */
+.hero{
+    padding:80px 10%;
+    background:linear-gradient(135deg,#edf2ff,#f8f9fb);
+    animation:fadeIn 1.2s ease;
+}
+
+.hero h2{
+    font-size:40px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:18px;
+    color:#555;
+    max-width:600px;
+}
+
+/* CARD GRID */
+.container{
+    padding:70px 10%;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+/* CARD */
+.card{
+    background:white;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+    transition:all 0.4s cubic-bezier(.25,.8,.25,1);
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+}
+
+/* Hover Lift Effect */
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* Gradient Hover Overlay */
+.card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(120deg,transparent,rgba(255,255,255,0.6),transparent);
+    transition:0.6s;
+}
+
+.card:hover::before{
+    left:100%;
+}
+
+.card h3{
+    margin-bottom:15px;
+    font-weight:600;
+}
+
+.card p{
+    color:#666;
+    font-size:15px;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 20px;
+    background:#5c6cff;
+    color:white;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    transition:all 0.3s ease;
+}
+
+/* Button Hover Animation */
+.btn:hover{
+    background:#3f51ff;
+    transform:scale(1.05);
+    box-shadow:0 8px 20px rgba(92,108,255,0.4);
+}
+
+/* Fade In Animation */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* Scroll Animation */
+.reveal{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all 0.8s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:40px;
+    background:white;
+    margin-top:60px;
+    color:#777;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Autism Screening Tests</h1>
+</header>
+
+<section class="hero">
+    <h2>Autism Tests & Assessments</h2>
+    <p>
+        Explore validated screening tools to better understand autism-related traits.
+        These tools are for awareness purposes only and not diagnostic.
+    </p>
+</section>
+
+<section class="container">
+    <div class="grid">
+
+        <div class="card reveal">
+            <h3>Autism Spectrum Quotient</h3>
+            <p>A widely used screening tool to measure autistic traits in adults.</p>
+            <a href="#" class="btn">Take Test</a>
+        </div>
+
+        <div class="card reveal">
+            <h3>Empathy Quotient</h3>
+            <p>Measures empathy levels and emotional understanding ability.</p>
+            <a href="#" class="btn">Take Test</a>
+        </div>
+
+        <div class="card reveal">
+            <h3>RAADS Screening</h3>
+            <p>Designed to identify adults who may have escaped earlier diagnosis.</p>
+            <a href="#" class="btn">Take Test</a>
+        </div>
+
+        <div class="card reveal">
+            <h3>Camouflaging Traits</h3>
+            <p>Assesses masking or camouflaging behaviours in social settings.</p>
+            <a href="#" class="btn">Take Test</a>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 Autism Screening Platform | Awareness Only
+</footer>
+
+<script>
+
+/* Scroll Reveal Animation */
+function revealOnScroll(){
+    const reveals=document.querySelectorAll(".reveal");
+    reveals.forEach(el=>{
+        const windowHeight=window.innerHeight;
+        const elementTop=el.getBoundingClientRect().top;
+        const visiblePoint=100;
+
+        if(elementTop < windowHeight - visiblePoint){
+            el.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+</script>
+
+</body>
+</html>
