@@ -1,0 +1,83 @@
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  z-index: 1; 
+}
+
+.bg {
+  position: absolute;
+  width: 100vw;
+  inset: 0;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.will {
+  background-image: url("/assets/Will.jpg");
+}
+
+.vecna {
+  background-image: url("/assets/Vecna.jpg");
+  filter: brightness(1.2) contrast(1.2);
+}
+
+/* DARK OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, transparent 50%, black 100%);
+}
+
+/* NOISE */
+.noise {
+  position: absolute;
+  inset: 0;
+  background: url("/assets/noise.png");
+  opacity: 0.06;
+}
+
+/* CONTENT */
+.hero-content {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  z-index: 10;
+}
+
+/* BUTTON */
+.cta {
+  position: relative;
+  padding: 14px 32px;
+  font-size: 14px;
+  color: #fff;
+  border: 1px solid rgba(255, 0, 0, 0.6);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* glow border */
+.cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, red, transparent);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+/* hover effect */
+.cta:hover::before {
+  opacity: 1;
+}
+
+/* hover scale */
+.cta:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+}

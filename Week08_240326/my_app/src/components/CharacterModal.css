@@ -1,0 +1,181 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  width: 900px;
+  height: 700px;
+  max-width: 95%;
+
+  display: flex;
+  gap: 30px;
+  padding: 25px;
+
+  background: #0b0b0b;
+  border-radius: 16px;
+  box-shadow: 0 0 60px rgba(255,0,0,0.3);
+
+  overflow: hidden; /* IMPORTANT */
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.modal-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: red;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.desc {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.abilities {
+  margin-top: 15px;
+}
+
+.abilities h4 {
+  font-size: 18px;
+  color: #ff2c2c;
+  margin-bottom: 8px;
+}
+
+.abilities ul {
+  list-style: none;
+  padding: 0;
+}
+
+.abilities li {
+  font-size: 15px;
+  color: #ddd;
+  margin-bottom: 6px;
+  position: relative;
+  padding-left: 18px;
+}
+
+/* custom bullet */
+.abilities li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: red;
+}
+
+.stats {
+  margin-top: 20px;
+}
+
+.stats h4 {
+  font-size: 18px;
+  color: #ff2c2c;
+  margin-bottom: 10px;
+}
+
+.stats p {
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #ccc;
+}
+
+.bar {
+  height: 8px;
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.bar div {
+  height: 100%;
+  background: linear-gradient(90deg, red, darkred);
+  box-shadow: 0 0 10px red;
+}
+
+.left {
+  flex: 1;
+  height: 100%;
+}
+
+.left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 12px;
+}
+
+.right {
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.4),
+    transparent
+  );
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  height: 100%;
+  overflow-y: auto; /* SCROLL INSIDE */
+  padding-right: 10px;
+}
+
+.right::-webkit-scrollbar {
+  width: 5px;
+}
+
+.right::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
+
+/* NAME */
+.right h2 {
+  font-size: 34px;
+  color: #ff2c2c;
+  text-shadow: 0 0 12px red;
+  margin-bottom: 5px;
+}
+
+/* TITLE */
+.right h4 {
+  font-size: 18px;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+/* GENERAL TEXT */
+.right p {
+  font-size: 16px;
+  color: #e5e5e5;
+  line-height: 1.6;
+}
+
+/* LABELS */
+.right strong {
+  color: #ff4d4d;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
