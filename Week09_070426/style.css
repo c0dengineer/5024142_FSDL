@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+
+    /* 🍓 Gingham Background */
+    background-color: #ffe4ec;
+    background-image: 
+        linear-gradient(45deg, #ffccd5 25%, transparent 25%),
+        linear-gradient(-45deg, #ffccd5 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #ffccd5 75%),
+        linear-gradient(-45deg, transparent 75%, #ffccd5 75%);
+    background-size: 60px 60px;
+    background-position: 0 0, 0 30px, 30px -30px, -30px 0px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 20px;
+    background: #c9184a;
+    color: white;
+    font-size: 20px;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+}
+
+/* Cards */
+.card {
+    width: 320px;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 8px 25px rgba(255, 105, 135, 0.3);
+}
+
+/* Input */
+input {
+    width: 92%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #ffc2d1;
+    margin: 10px 0;
+}
+
+/* Preview */
+.preview {
+    color: #ff4d6d;
+    margin: 10px 0;
+}
+
+/* Buttons */
+.buttons button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 12px;
+    background: #c9184a;
+    color: white;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background: #ff5d8f;
+}
+
+/* List */
+.list {
+    margin-top: 15px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    background: #fff0f5;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.item button {
+    border: none;
+    background: #c9184a;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.item button:hover {
+    background: #ff5d8f;
+}
+
+
+/* Clear all */
+.clear-all {
+    width: 100%;
+    padding: 10px;
+    background: #c9184a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.clear-all:hover {
+    background: #ff5d8f;
+}
+
+/* Empty */
+.empty {
+    opacity: 0.6;
+}

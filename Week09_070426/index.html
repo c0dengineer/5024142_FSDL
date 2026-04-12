@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Strawberry Dashboard 🍓</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-controller="MainController">
+
+<!-- HEADER -->
+<header class="header">
+    <h1>🍓 Strawberry Cloud</h1>
+</header>
+
+<div class="container">
+
+    <!-- LEFT PANEL -->
+    <div class="card">
+        <h2>Greeting Card 💖</h2>
+
+        <input 
+            type="text"
+            placeholder="Enter name"
+            ng-model="username"
+        >
+
+        <h3 class="preview">{{ getGreeting() }}</h3>
+
+        <div class="buttons">
+            <button ng-click="addName()">➕ Save</button>
+            <button ng-click="clearInput()">🧹 Clear</button>
+        </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="card">
+        <h2>Saved Names ☁️</h2>
+
+        <div class="list" ng-if="names.length > 0">
+
+            <div class="item" ng-repeat="name in names track by $index">
+                <span>{{ name }}</span>
+                <button ng-click="deleteName($index)">❌</button>
+            </div>
+
+            <button class="clear-all" ng-click="clearAll()">Clear All 💔</button>
+        </div>
+
+        <p ng-if="names.length === 0" class="empty">
+            No names saved yet 🍬
+        </p>
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

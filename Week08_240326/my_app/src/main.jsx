@@ -9,7 +9,6 @@ createRoot(document.getElementById('root')).render(
   </StrictMode>,
 )
 
-// 🔴 Cursor Glow Code (GLOBAL)
 const cursor = document.createElement("div");
 cursor.classList.add("cursor");
 document.body.appendChild(cursor);
