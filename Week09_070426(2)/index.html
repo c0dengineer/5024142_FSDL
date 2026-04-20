@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="libraryApp">
+<head>
+  <meta charset="UTF-8">
+  <title>LibTrack Premium</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="MainCtrl">
+
+<header class="navbar">
+  <div class="logo">
+    <div class="logo-box">LT</div>
+    <span>LibTrack</span>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="card">
+      <h2>{{stats.total}}</h2>
+      <p>Total</p>
+    </div>
+    <div class="card green">
+      <h2>{{stats.onTime}}</h2>
+      <p>On Time</p>
+    </div>
+    <div class="card red">
+      <h2>{{stats.overdue}}</h2>
+      <p>Overdue</p>
+    </div>
+  </div>
+
+  <!-- FORM -->
+  <div class="form-box">
+    <h3>Add Borrow Record</h3>
+
+    <form name="bookForm" ng-submit="addBook()" novalidate>
+
+      <input type="text" placeholder="Student Name"
+        ng-model="newBook.studentName" required minlength="3">
+
+      <!-- STRICT ID FORMAT -->
+      <input type="text" placeholder="Student ID (STU1234)"
+        ng-model="newBook.studentId"
+        name="studentId"
+        required
+        ng-pattern="/^STU[0-9]{4}$/">
+
+      <p class="error" ng-show="bookForm.studentId.$dirty && bookForm.studentId.$invalid">
+        Format must be STU1234
+      </p>
+
+      <input type="text" placeholder="Book Title"
+        ng-model="newBook.bookTitle" required>
+
+      <!-- DATES -->
+      <div class="date-row">
+        <div>
+          <label>Borrow Date</label>
+          <input type="date" ng-model="newBook.borrowDate" required>
+        </div>
+
+        <div>
+          <label>Due Date</label>
+          <input type="date" ng-model="newBook.dueDate" required>
+        </div>
+      </div>
+
+      <p class="error" ng-show="dateError">
+        Due date must be AFTER borrow date
+      </p>
+
+      <button type="submit" ng-disabled="bookForm.$invalid || dateError">
+        Add Record
+      </button>
+
+    </form>
+  </div>
+
+  <!-- FILTER -->
+  <div class="filters">
+  <button 
+    ng-class="{active: filter==='all'}"
+    ng-click="filter='all'">
+    All
+  </button>
+
+  <button 
+    ng-class="{active: filter==='ok'}"
+    ng-click="filter='ok'">
+    On Time
+  </button>
+
+  <button 
+    ng-class="{active: filter==='overdue'}"
+    ng-click="filter='overdue'">
+    Overdue
+  </button>
+</div>
+
+  <!-- TABLE -->
+  <div class="table-box">
+    <table>
+      <tr>
+        <th>Student</th>
+        <th>Book</th>
+        <th>Borrow</th>
+        <th>Due</th>
+        <th>Status</th>
+      </tr>
+
+      <tr ng-repeat="b in books | filter:filterBooks">
+        <td>
+          <div class="student">
+            <div class="avatar">{{b.studentName[0]}}</div>
+            {{b.studentName}}
+          </div>
+        </td>
+        <td>{{b.bookTitle}}</td>
+        <td>{{b.borrowDate | date:'MMM d'}}</td>
+        <td>{{b.dueDate | date:'MMM d'}}</td>
+        <td>
+          <span class="badge" ng-class="statusClass(b)">
+            {{status(b)}}
+          </span>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
