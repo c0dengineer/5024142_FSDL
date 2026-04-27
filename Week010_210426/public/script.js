@@ -1,4 +1,4 @@
-const API = "http://bookish-doodle-4j9wrwpx755c57g6-5000.app.github.dev/api/notes";
+const API = "https://bookish-doodle-4j9wrwpx755c57g6-5000.app.github.dev/api/notes";
 
 
 let allNotes = [];
