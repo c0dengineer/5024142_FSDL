@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>🌸 Petal Notes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-blobs">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+</div>
+
+<div class="app">
+    <header>
+        <h1>🌸 Petal Notes</h1>
+        <p class="subtitle">Your little corner of thoughts</p>
+        <button class="theme-btn" onclick="toggleTheme()" title="Toggle theme">☀️</button>
+    </header>
+
+    <!-- ADD / EDIT FORM -->
+    <div class="card input-card">
+        <textarea id="noteInput" placeholder="What's on your mind today? ✨" rows="3"></textarea>
+        <div class="input-actions">
+            <span id="charCount">0 / 300</span>
+            <div>
+                <button id="cancelBtn" class="btn btn-ghost" onclick="cancelEdit()" style="display:none">Cancel</button>
+                <button id="submitBtn" class="btn btn-primary" onclick="submitNote()">+ Add Note</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEARCH + SORT BAR -->
+    <div class="toolbar">
+        <div class="search-wrap">
+            <span class="search-icon">🔍</span>
+            <input id="searchInput" placeholder="Search your notes..." oninput="searchNotes()" />
+            <button class="clear-search" id="clearSearch" onclick="clearSearch()" style="display:none">✕</button>
+        </div>
+        <select id="sortSelect" onchange="loadNotes()">
+            <option value="newest">Newest first</option>
+            <option value="oldest">Oldest first</option>
+            <option value="az">A → Z</option>
+        </select>
+    </div>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+        <span id="noteCount">0 notes</span>
+        <button class="btn btn-danger-ghost" onclick="deleteAll()" id="deleteAllBtn" style="display:none">🗑 Clear All</button>
+    </div>
+
+    <!-- NOTES GRID -->
+    <div id="notesContainer"></div>
+
+    <!-- EMPTY STATE -->
+    <div id="emptyState" class="empty-state" style="display:none">
+        <div class="empty-illustration">🌷</div>
+        <p>No notes yet. Write your first one!</p>
+    </div>
+
+    <!-- TOAST -->
+    <div id="toast" class="toast"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
