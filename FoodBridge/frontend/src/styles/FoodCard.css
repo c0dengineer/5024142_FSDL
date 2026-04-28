@@ -1,0 +1,263 @@
+/* FoodCard CSS */
+.food-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: var(--transition);
+  background: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.food-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.card-body-custom {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 8px;
+}
+
+.category-badge {
+  background: rgba(46, 204, 113, 0.1);
+  color: var(--primary-color);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status-badge {
+  font-size: 11px;
+  padding: 4px 10px;
+}
+
+.status-available {
+  background: #2ecc71;
+}
+
+.status-requested {
+  background: #3498db;
+}
+
+.status-claimed {
+  background: #f39c12;
+}
+
+.status-expired {
+  background: #e74c3c;
+}
+
+.food-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #1a1a2e;
+}
+
+.quantity-info {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.dietary-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.dietary-tag {
+  background: rgba(52, 152, 219, 0.1);
+  color: var(--accent-color);
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.location-info {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.countdown-timer {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 16px;
+  text-align: center;
+  border: 2px solid #e0e0e0;
+}
+
+.countdown-timer.bg-success {
+  background: rgba(46, 204, 113, 0.1);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.countdown-timer.bg-info {
+  background: rgba(52, 152, 219, 0.1);
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.countdown-timer.bg-warning {
+  background: rgba(243, 156, 18, 0.1);
+  color: #f39c12;
+  border-color: #f39c12;
+}
+
+.countdown-timer.bg-danger {
+  background: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+  border-color: #e74c3c;
+}
+
+.countdown-timer.pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.donor-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  margin-top: auto;
+}
+
+.donor-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.donor-details {
+  flex: 1;
+}
+
+.donor-details h6 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.rating {
+  font-size: 12px;
+  color: #666;
+  margin: 2px 0 0 0;
+}
+
+.btn-view-details {
+  background: linear-gradient(135deg, var(--primary-color), #27ae60);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  transition: var(--transition);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-view-details:hover {
+  background: linear-gradient(135deg, #27ae60, var(--primary-color));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(46, 204, 113, 0.3);
+  color: white;
+}
+
+/* Rating Stars */
+.rating-stars {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.star-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ddd;
+  transition: var(--transition);
+  font-size: 28px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.star-btn.filled {
+  color: #f39c12;
+}
+
+.star-btn:not(.read-only):hover {
+  transform: scale(1.2);
+}
+
+.star-btn.read-only {
+  cursor: default;
+}
+
+.score-display {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Map Popup */
+.map-popup {
+  padding: 8px;
+  text-align: center;
+}
+
+.map-popup h6 {
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+
+.map-popup p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+/* Empty State */
+.no-results {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.no-results h3 {
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.no-results p {
+  color: #aaa;
+}
